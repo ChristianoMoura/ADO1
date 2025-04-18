@@ -9,6 +9,12 @@ main {
       }
 .titulo{
     font-family:  'Montserrat', sans-serif;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 #cadastro {
@@ -35,4 +41,16 @@ main {
 }
 .botão{
     font-family:'Open Sans', sans-serif;
+}
+
+
+#listadesc span {
+    display: block;
+}
+#descrição {
+    display: grid;
+    gap: 20px;
+    justify-content: left;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
 }
