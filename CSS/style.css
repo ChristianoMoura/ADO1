@@ -1,56 +1,388 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-.sessão{
-    height: 100vh;
+
+/* Tipografia */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(to right, #054F77, #008080);
+    margin: 0;
+    padding: 0;
+
 }
 
-main {
-        font-family: 'Open Sans', sans-serif;
-      }
-.titulo{
-    font-family:  'Montserrat', sans-serif;
+.titulo {
+    font-family: 'Montserrat', sans-serif;
     font-size: 3vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+    /* Responsivo baseado na largura da tela */
+    font-weight: bold;
+    margin-bottom: 2vh;
+    /* Espaço abaixo dos títulos */
 }
 
+/* Layout geral */
+.sessão {
+    height: 90vh;
+}
+
+/* Seção Cadastro */
 #cadastro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../IMG/young-afro-man-listening-music-with-headphones.jpg);
+    background-size: cover;
+    /* A imagem preenche toda a área */
+    background-repeat: no-repeat;
+    /* Evita repetições */
+    background-position: center 55%;
+    /* Centraliza a imagem */
+    width: 100vw;
+    /* O contêiner ocupa toda a largura da tela */
     height: 100vh;
+    /* O contêiner ocupa toda a altura da tela */
+
+
+}
+
+#tituloCadastro {
+    font-size: 10vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    color: #ffffff;
+}
+
+#cadastro p {
+    margin-bottom: 10vh;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+#botaoCadastro {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 2vh 5vw;
+    margin-top: 2vh;
+    cursor: pointer;
+    border-radius: 1vw;
+    border: solid #ffffff;
+    background-color: #0606067a;
+    transition: all 0.3s ease;
+    /* Anima transições suaves */
+}
+
+#botaoCadastro:hover {
+    background-color: #ffffff;
+    color: #060606;
+    transform: scale(1.05);
+    /* Efeito de 'zoom' no hover */
+}
+
+/* Seção Descrição */
+#descrição {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    /* Espaço dinâmico entre os elementos */
+    padding: 4vh;
+    /* Tons de verde */
+
+}
+
+#descrição article {
+    display: flex;
+    max-width: 90vw;
+    /* Define uma largura mais responsiva */
+}
+
+#explicação,
+#beneficios {
+    flex: 1;
     text-align: center;
 }
-#cabeçalho>h1{
-      font-size: 13vw;
-      margin: 0;
+
+/* Estilos para listas */
+#listaBeneficios {
+    padding-left: 0;
 }
-#cabeçalho>p {
-    font-size: 1.5vw;
+
+#listaBeneficios li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
 }
-#botaocad{
-    width: 80%;
-    height: auto;
-    padding: 15px 80px;
+
+#listaBeneficios b {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#listaBeneficios span {
+    margin-top: 1vh;
+}
+
+#listaExplicação {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 2vh;
+    line-height: 3.6;
+}
+
+/*Sessão comentários*/
+
+#comentarios {
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 10vh;
+}
+
+#comentarios h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#comentarios article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 5vh;
+}
+
+
+:is(#pessoa1, #pessoa2, #pessoa3) {
     border-radius: 10px;
-    background-color: white;
-}
-.botão{
-    font-family:'Open Sans', sans-serif;
-}
-
-
-#listadesc span {
+    height: 13vh;
     display: block;
+    margin-top: 5px;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to right, #054F77, #008080);
+    color: white;
 }
-#descrição {
-    display: grid;
-    gap: 20px;
-    justify-content: left;
-    align-items: stretch;
-    grid-template-columns: 1fr 1fr;
+
+
+
+#propaganda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55vh;
+    height: 30vh;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    animation: aparecer 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#propaganda button {
+    margin-top: 15px;
+    background: linear-gradient(to right, #054F77, #008080);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#propaganda button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#propaganda button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Assinaturas */
+#assinaturas {
+    padding-top: 10vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../IMG/river-runs-through-jungle.jpg);
+    background-size: cover;
+    /* A imagem preenche toda a área */
+    background-repeat: no-repeat;
+    /* Evita repetições */
+    background-position: center 85%;
+    /* Centraliza a imagem */
+    width: 100vw;
+    /* O contêiner ocupa toda a largura da tela */
+    height: 100vh;
+}
+
+#assinaturas h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#assinaturas article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin-top: 5vh;
+   
+}
+
+.plano {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55vh;
+    height: 60vh;
+    /* EFEITO DE SOBREPOSIÇÃO */
+    background: rgba(255, 255, 255, 0.1); /* fundo translúcido */
+    backdrop-filter: blur(10px);          /* desfoque atrás */ 
+    border: 1px solid rgba(255, 255, 255, 0.2); /* borda leve */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra suave */
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.plano button {
+    background: rgba(255, 255, 255, 0.1); /* fundo translúcido */
+    backdrop-filter: blur(10px);          /* desfoque atrás */ 
+    border: 1px solid rgba(255, 255, 255, 0.2); /* borda leve */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra suave */
+    color: #ffffff;
+}
+/* Títulos dos planos */
+.plano h4 {
+    font-size: 1.5rem;
+}
+
+/* Listas dentro dos planos */
+.plano ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 0vh;
+    line-height: 3;
+}
+
+/* Botões dos planos */
+.plano button {
+    padding: 2vh 5vw;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+}
+
+/* Ajuste específico para o botão do plano Floresta */
+#floresta button {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+/*faq*/
+#faq {
+    height: 60vh;
+}
+
+#faq h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.perguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.pergunta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, #054F77, #008080);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.pergunta:hover {
+    background: linear-gradient(to right, #04506A, #006666);
+}
+
+.pergunta h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+.resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    color: white;
+    margin-top: 10px;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+
+/* Quando o checkbox está marcado, mostra a resposta */
+.perguntas input:checked ~ .resposta {
+    display: flex;
+    align-items: center;
+    width: 205vh;
+    padding: 3.5vh;
+}
+
+.imgseta {
+    width: 3.8vh;
+}
+
+
+
+/*rodapé*/
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background-color: #0f2121;
 }
