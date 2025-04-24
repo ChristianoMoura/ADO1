@@ -15,10 +15,8 @@ body {
 .titulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 65px;
-    /* Responsivo baseado na largura da tela */
     font-weight: bold;
     margin-bottom: 2vh;
-    /* Espaço abaixo dos títulos */
 }
 
 @media(max-width: 1024px) {
@@ -53,16 +51,10 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(../IMG/young-afro-man-listening-music-with-headphones.jpg);
     background-size: cover;
-    /* A imagem preenche toda a área */
     background-repeat: no-repeat;
-    /* Evita repetições */
     background-position: right center;
-    /* Ajusta a imagem para o lado direito */
-    /* A imagem vai se alinhar mais à direita */
     width: 100%;
-    /* Usa 100% da largura da tela, evitando a coluna azul */
     height: 100vh;
-    /* O contêiner ocupa toda a altura da tela */
 }
 
 #tituloCadastro {
@@ -88,14 +80,12 @@ body {
     border: solid #ffffff;
     background-color: #0606067a;
     transition: all 0.3s ease;
-    /* Anima transições suaves */
 }
 
 #botaoCadastro:hover {
     background-color: #ffffff;
     color: #060606;
     transform: scale(1.05);
-    /* Efeito de 'zoom' no hover */
 }
 
 /*Cadastro - Celular*/
@@ -176,16 +166,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 4vw;
-    /* Espaço dinâmico entre os elementos */
     padding: 4vh;
-    /* Tons de verde */
+ 
 
 }
 
 #descrição article {
     display: flex;
     max-width: 90vw;
-    /* Define uma largura mais responsiva */
+
 }
 
 #explicação,
@@ -194,7 +183,6 @@ body {
     text-align: center;
 }
 
-/* Estilos para listas */
 #listaBeneficios {
     padding-left: 0;
 }
@@ -380,7 +368,6 @@ body {
     background: linear-gradient(to right, #054F77, #008080);
     color: white;
 
-    /* Controle de texto */
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -838,7 +825,7 @@ body {
     }
 }
 
-/*faq*/
+/* Sessão FAQ*/
 #faq {
     height: 60vh;
 }
@@ -884,31 +871,155 @@ body {
 .resposta {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.5s ease;
+    transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     color: white;
     margin-top: 10px;
     padding: 0 20px;
     border-radius: 8px;
+    opacity: 0; 
+    pointer-events: none; 
 }
 
-/* Quando o checkbox está marcado, mostra a resposta */
-.perguntas input:checked~.resposta {
+.perguntas input:checked ~ .resposta {
     display: flex;
     align-items: center;
-    width: 205vh;
-    padding: 3.5vh;
+    width: 100%;
+    padding: 3.5vh 20px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .imgseta {
     width: 3.8vh;
 }
 
-/*rodapé*/
+/*FAQ - Celular*/
+@media (max-width: 600px) {
+    #faq {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    #faq h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .pergunta {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .resposta {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .perguntas input:checked~.resposta {
+        width: 100%;
+    }
+
+    .imgseta {
+        width: 3vh;
+    }
+}
+
+/*FAQ - Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    #faq {
+        height: auto;
+        padding: 40px 30px;
+    }
+
+    #faq h2 {
+        font-size: 2rem;
+    }
+
+    .pergunta {
+        font-size: 1.05rem;
+        padding: 12px 18px;
+    }
+
+    .resposta {
+        font-size: 1rem;
+        padding: 15px 25px;
+        width: 100%;
+    }
+
+    .perguntas input:checked~.resposta {
+        width: 100%;
+    }
+
+    .imgseta {
+        width: 3.5vh;
+    }
+}
+
+/*FAQ - Notebooks*/
+@media (min-width: 1025px) {
+    #faq {
+        height: 60vh;
+        padding: 50px;
+    }
+
+    #faq h2 {
+        font-size: 2.2rem;
+    }
+
+    .pergunta {
+        font-size: 1.1rem;
+        padding: 15px 25px;
+    }
+
+    .resposta {
+        font-size: 1.05rem;
+        padding: 20px 30px;
+        width: 100%;
+    }
+
+    .perguntas input:checked~.resposta {
+        width: 100%;
+    }
+
+    .imgseta {
+        width: 3.8vh;
+    }
+}
+
+
+/*Sessão Rodapé*/
 footer {
     display: flex;
     justify-content: center;
     gap: 5px;
     background-color: #0f2121;
+}
+
+/*Rodapé - Celular*/
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+/*Rodapé - Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+        flex-direction: row;
+        padding: 15px;
+    }
+}
+
+/*Rodapé - Notebook*/
+@media (min-width: 1025px) {
+    footer {
+        flex-direction: row;
+        padding: 20px;
+    }
 }
