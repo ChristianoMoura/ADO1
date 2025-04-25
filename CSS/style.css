@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/* Tipografia */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -41,7 +40,6 @@ body {
 }
 
 
-/* Seção Cadastro */
 #cadastro {
     display: flex;
     flex-direction: column;
@@ -88,13 +86,10 @@ body {
     transform: scale(1.05);
 }
 
-/*Cadastro - Celular*/
 @media (max-width: 600px) {
     #cadastro {
         background-position: center center;
-        /* Foca a mulher no centro */
         height: 140vh;
-        /* Mais alto para a imagem aparecer bem */
     }
 
     #tituloCadastro {
@@ -112,7 +107,6 @@ body {
         margin-bottom: 6vh;
     }
 }
-/*Cadastro - Tablets*/
 @media (min-width: 601) and (max-width: 1024px) {
     #cadastro {
         background-position: center center;
@@ -133,13 +127,12 @@ body {
         margin-bottom: 8vh;
     }
 }
-/* Cadastro - Notebooks*/
 @media (min-width: 1025px) and (max-width: 1355px) {
     #cadastro {
         padding: 5vh 4vw;
         background-position: center;
         background-size: cover;
-        height: auto; /* Pra evitar overflow vertical em telas menores */
+        height: auto; 
     }
 
     #tituloCadastro {
@@ -159,7 +152,6 @@ body {
 }
 
 
-/* Seção Descrição */
 #descrição {
     height: 80vh;
     display: flex;
@@ -210,7 +202,6 @@ body {
     line-height: 3.6;
 }
 
-/*Descrição - Celulares*/
 @media (max-width: 600px) {
     #descrição {
         flex-direction: column;
@@ -250,7 +241,7 @@ body {
         margin-top: 2vh;
     }
 }
-/*Descrição - Tablets*/
+
 @media (min-width: 601px) and (max-width: 1024px) {
     #descrição {
         flex-direction: column;
@@ -290,7 +281,7 @@ body {
         margin-top: 3vh;
     }
 }
-/*Descrição - Notebook*/
+
 @media (min-width: 1025px) and (max-width: 1355px) {
     #descrição {
         padding: 6vh 6vw;
@@ -328,7 +319,6 @@ body {
 }
 
 
-/*Sessão comentários*/
 #comentarios {
     height: 80vh;
     background: rgba(255, 255, 255, 0.1);
@@ -434,7 +424,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Comentários/Propaganda - Celular */
+
 @media (max-width: 600px) {
     #comentarios {
         height: auto;
@@ -482,18 +472,16 @@ body {
         max-width: 220px;
     }
 }
-/*Comentarios/Propagandas - Tablet*/
+
 @media (min-width: 601px) and (max-width: 1024px) {
     #comentarios {
         height: auto;
-        /* Deixa crescer conforme o conteúdo */
         padding-top: 8vh;
         padding-bottom: 4vh;
     }
 
     #comentarios article {
         flex-direction: column;
-        /* Empilha os comentários */
         gap: 3vh;
     }
 
@@ -515,7 +503,7 @@ body {
         padding: 10px 20px;
     }
 }
-/*Comentarios/Propagandas - Notebook*/
+
 @media (min-width: 1025px) and (max-width: 1356px) {
     #comentarios {
         height: auto;
@@ -559,7 +547,7 @@ body {
     }
 }
 
-/* Assinaturas */
+
 #assinaturas {
     padding-top: 10vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -647,7 +635,7 @@ body {
     margin-bottom: 3vh;
 }
 
-/*Assinatura - celular*/
+
 @media (max-width: 600px) {
     #assinaturas {
         height: auto;
@@ -709,7 +697,7 @@ body {
     }
 }
 
-/*Assinatura Tablets*/
+
 @media (min-width: 601px) and (max-width: 1024px) {
     #assinaturas {
         height: auto;
@@ -725,7 +713,7 @@ body {
     }
 
     .plano {
-        width: 40vw; /* planos ocupam cerca de metade da largura */
+        width: 40vw;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -765,7 +753,7 @@ body {
     }
 }
 
-/*Assinatura - Notebook*/
+
 @media (min-width: 1025px) and (max-width: 1356px) {
     #assinaturas {
         height: auto;
@@ -825,7 +813,7 @@ body {
     }
 }
 
-/* Sessão FAQ*/
+
 #faq {
     height: 60vh;
 }
@@ -895,7 +883,7 @@ body {
     width: 3.8vh;
 }
 
-/*FAQ - Celular*/
+
 @media (max-width: 600px) {
     #faq {
         height: auto;
@@ -929,7 +917,7 @@ body {
     }
 }
 
-/*FAQ - Tablets*/
+
 @media (min-width: 601px) and (max-width: 1024px) {
     #faq {
         height: auto;
@@ -960,7 +948,7 @@ body {
     }
 }
 
-/*FAQ - Notebooks*/
+
 @media (min-width: 1025px) {
     #faq {
         height: 60vh;
@@ -992,7 +980,7 @@ body {
 }
 
 
-/*Sessão Rodapé*/
+
 footer {
     display: flex;
     justify-content: center;
@@ -1000,7 +988,7 @@ footer {
     background-color: #0f2121;
 }
 
-/*Rodapé - Celular*/
+
 @media (max-width: 600px) {
     footer {
         flex-direction: column;
@@ -1008,7 +996,7 @@ footer {
     }
 }
 
-/*Rodapé - Tablets */
+
 @media (min-width: 601px) and (max-width: 1024px) {
     footer {
         flex-direction: row;
@@ -1016,7 +1004,7 @@ footer {
     }
 }
 
-/*Rodapé - Notebook*/
+
 @media (min-width: 1025px) {
     footer {
         flex-direction: row;
